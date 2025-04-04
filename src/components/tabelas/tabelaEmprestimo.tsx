@@ -30,8 +30,8 @@ function TabelaEmprestimo() {
         currentPageReportTemplate="{first} to {last} of {totalRecords}" paginatorLeft={paginatorLeft} paginatorRight={paginatorRight}>
     <Column field="nome" header="Nome do aluno"  body={(rowData) => rowData.aluno.nome} style={{ width: '25%' }}></Column>
     <Column field="titulo" header="Nome do livro" body={(rowData) => rowData.livro.titulo} style={{ width: '25%' }}></Column>
-    <Column field="dataEmprestimo" header="Data de empréstimo" style={{ width: '25%' }}></Column>
-    <Column field="dataDevolucao" header="Data de devolução" style={{ width: '25%' }}></Column>
+    <Column field="dataEmprestimo" header="Data emprestimo" style={{ width: '25%' }} body={(rowData) => new Date(rowData.dataNascimento).toLocaleDateString('pt-BR')} />
+    <Column field="dataDevolucao" header="Data de devoulução" style={{ width: '25%' }} body={(rowData) => new Date(rowData.dataNascimento).toLocaleDateString('pt-BR')} />
     <Column field="statusEmprestimo" header="Status de emprestimo" style={{ width: '25%' }}></Column>
 </DataTable>
         </>
