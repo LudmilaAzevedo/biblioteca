@@ -3,7 +3,7 @@ import LoginForm from "../../components/LoginForm/LoginForm";
 import Rodape from "../../components/Rodape/Rodape";
 
 
-function PHome() {
+function PLogin() {
     return (
         <>
         <Cabecalho/>
@@ -13,4 +13,4 @@ function PHome() {
     );
 }
 
-export default PHome
+export default PLogin
